@@ -2,9 +2,7 @@ import os
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from time import sleep
-
-dir_path = os.path.dirname(os.path.realpath(__file__))
-file = dir_path + r'\chromedriver.exe'
+from chromedriver_py import binary_path
 
 def check_exists_by_xpath(xpath):
     try:
@@ -105,7 +103,7 @@ except:
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--mute-audio")
 chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36")
-driver = webdriver.Chrome(file, chrome_options=chrome_options)
+driver = webdriver.Chrome(binary_path, chrome_options=chrome_options)
 
 
 driver.get('https://www.twitch.tv/login')
