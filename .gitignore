@@ -1,2 +1,4 @@
 drops/
 env/
+output/
+__pycache__/
