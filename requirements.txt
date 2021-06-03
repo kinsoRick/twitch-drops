@@ -6,4 +6,4 @@ Rx==3.1.1
 selenium==3.141.0
 chromedriver-py==90.0.4430.24
 twitch-python==0.0.19
-urllib3==1.26.4
+urllib3>=1.26.5
